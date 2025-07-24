@@ -1,0 +1,11 @@
+file_format: "1"
+id: kai-simple
+name: kai-simple
+type: shield
+url: https://github.com/kaihchang/zmk-config-kai-simple
+requires: [nice_nano_v2]
+features:
+  - keys
+siblings:
+  - kai_simple_left
+  - kai_simple_right
