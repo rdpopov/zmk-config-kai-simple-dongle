@@ -10,4 +10,4 @@ What's good about ZMK dongles?<br/>
 <br/>
 Surely there's something bad?<br/>
 - Extra cost for a spare MCU, seeeduino nrf52840 sense in my case here.<br/>
-- Takes an extra USB slot on your device.<br/>
+- Takes up an extra USB slot on your device.
