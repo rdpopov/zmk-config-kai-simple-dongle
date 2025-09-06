@@ -114,7 +114,7 @@
         // NUM
         left_layer {
             bindings = <
-                &kp ESC    &kp N1  &kp N2  &kp N3  &kp TILDE     &kp UNDERSCORE &kp LPAR  &kp RPAR  &kp PLUS  &kp DEL
+                &kp ESC    &kp N1  &kp N2  &kp N3  &kp LS(LALT)  &kp UNDERSCORE &kp LPAR  &kp RPAR  &kp PLUS  &kp DEL
                 &kp TAB    &kp N4  &kp N5  &kp N6  &kp GRAVE     &kp MINUS      &kp LBRC  &kp RBRC  &kp EQUAL &kp COLON
                 &sk RSHFT  &kp N7  &kp N8  &kp N9  &kp N0        &kp PIPE       &kp LBKT  &kp RBKT  &kp BSLH  &kp SEMI
                                            &none   &trans        &trans         &sk RGUI
