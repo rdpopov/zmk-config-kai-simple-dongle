@@ -7,6 +7,29 @@
     transform = <&default_transform>;
 };
 
+&i2c0 {
+    compatible = "nordic,nrf-twi";
+    status = "okay";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+    clock-frequency = <I2C_BITRATE_FAST>; 
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        com-sequential;
+        prechargep = <0x22>;
+        inversion-on;
+    };
+};  
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
@@ -35,25 +58,3 @@
     
 };
 
-&i2c0 {
-    compatible = "nordic,nrf-twi";
-    status = "okay";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-    clock-frequency = <I2C_BITRATE_FAST>; 
-
-    oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        width = <128>;
-        height = <32>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <31>;
-        com-sequential;
-        prechargep = <0x22>;
-        inversion-on;
-    };
-};  
