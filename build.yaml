@@ -29,7 +29,7 @@ include:
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
   - board: nice_nano_v2
-    shield: kai_simple_dongle
+    shield: kai_simple_dongle dongle_display
     snippet: zmk-usb-logging
     # uart snippet needed on central side for ZMK studio to work
     
