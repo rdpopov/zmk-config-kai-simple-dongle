@@ -54,27 +54,6 @@
         ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
                     ╰────────╯ ╰────────╯            */
 
-    combos {
-        compatible = "zmk,combos";
-        combo_lck {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&mkp LCLK>;
-        };
-       
-        combo_rck {
-            timeout-ms = <50>;
-            key-positions = <28 29>;
-            bindings = <&mkp RCLK>;
-        };
-
-        combo_layer {
-            timeout-ms = <50>;
-            key-positions = <30 31>;
-            bindings = <&mo BTT>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -92,7 +71,7 @@
             bindings = <
                 &kp ESC    &kp N1  &kp N2  &kp N3  &kp LS(LALT)  &kp UNDERSCORE &kp LPAR  &kp RPAR  &kp PLUS  &kp DEL
                 &kp TAB    &kp N4  &kp N5  &kp N6  &none         &kp MINUS      &kp LBRC  &kp RBRC  &kp EQUAL &kp COLON
-                &kp RSHFT  &kp N7  &kp N8  &kp N9  &kp N0        &kp PIPE       &kp LBKT  &kp RBKT  &kp BSLH  &kp SEMI
+                &mo BTT    &kp N7  &kp N8  &kp N9  &kp N0        &kp PIPE       &kp LBKT  &kp RBKT  &kp BSLH  &kp SEMI
                                            &none   &trans        &trans         &sk RGUI
             >;
         };
@@ -100,10 +79,10 @@
         // SYM
         right_layer {
             bindings = <
-                &trans  &kp EXCL    &kp AT       &kp HASH   &kp FSLH    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END     &kp BKSP
-                &trans  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp SEMI    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT   &sk PIPE
-                &trans  &kp AMPS    &kp STAR     &kp TILDE  &kp GRAVE   &none     &none      &none      &none       &kp BSLH
-                                                 &sk RCTRL  &trans      &trans    &none
+                &trans      &kp EXCL    &kp AT       &kp HASH   &kp FSLH    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END     &kp BKSP
+                &trans      &kp DOLLAR  &kp PERCENT  &kp CARET  &kp SEMI    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT   &sk PIPE
+                &kp LCTL    &kp AMPS    &kp STAR     &kp TILDE  &kp GRAVE   &none     &none      &none      &none       &kp BSLH
+                                                     &sk RCTRL  &trans      &trans    &none
             >;
         };
         bt {
