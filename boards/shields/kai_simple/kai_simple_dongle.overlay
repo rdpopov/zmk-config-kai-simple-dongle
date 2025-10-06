@@ -18,7 +18,6 @@
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <63>;
         com-sequential;
         prechargep = <0x22>;
         inversion-on;
