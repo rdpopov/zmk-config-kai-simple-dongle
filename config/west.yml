@@ -7,7 +7,7 @@ manifest:
     - name: caksoylar
       url-base: https://github.com/caksoylar
     - name: englmaxi
-      url-base: https://github.com/englmaxi/zmk-dongle-display
+      url-base: https://github.com/rdpopov
   projects:
     - name: zmk
       remote: zmkfirmware
