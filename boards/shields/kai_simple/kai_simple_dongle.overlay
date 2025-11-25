@@ -1,6 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#import "kai_simple-layout.dtsi"
+#include "kai_simple-layout.dtsi"
 #include "kai_simple_pinctrl.dtsi"
 
 &physical_layout0 {
