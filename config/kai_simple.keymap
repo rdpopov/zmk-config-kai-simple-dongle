@@ -70,28 +70,28 @@
             timeout-ms = <50>;
             key-positions = <13 23>;
             bindings = <&kp T>;
-            layer = BASE;
+            layers = <BASE>;
         };
         // G
         combo_g {
             timeout-ms = <50>;
             key-positions = <12 22>;
             bindings = <&kp G>;
-            layer = BASE;
+            layers = <BASE>;
         };
         // B
         combo_b {
             timeout-ms = <50>;
             key-positions = <11 21>;
             bindings = <&kp B>;
-            layer = BASE;
+            layers = <BASE>;
         };
         // pipe
         combo_pipe {
             timeout-ms = <50>;
             key-positions = <10 20>;
             bindings = <&kp BSLH>;
-            layer = BASE;
+            layers = <BASE>;
         };
         // NOTE: LEFT
         // dot
@@ -99,7 +99,7 @@
             timeout-ms = <50>;
             key-positions = <16 26>;
             bindings = <&kp COMA>;
-            layer = BASE;
+            layers = <BASE>;
         };
         // dot
         combo_dot {
@@ -107,21 +107,21 @@
             key-positions = <17 27>;
             layer = BASE;
             bindings = <&kp DOT>;
-            layer = BASE;
+            layers = <BASE>;
         };
         // fslh
         combo_fslh {
             timeout-ms = <50>;
             key-positions = <18 28>;
             bindings = <&kp FSLH>;
-            layer = BASE;
+            layers = <BASE>;
         };
 
         combo_grave {
             timeout-ms = <50>;
             key-positions = <19 29>;
             bindings = <&kp GRAVE>;
-            layer = BASE;
+            layers = <BASE>;
         };
         // ====================================================================
         // combos number
@@ -130,14 +130,14 @@
             timeout-ms = <50>;
             key-positions = <13 23>;
             bindings = <&kp N0>;
-            layer = NUM;
-        }
+            layers = <NUM>;
+        };
 
         combo_change_lang {
             timeout-ms = <50>;
             key-positions = <12 22>;
             bindings = <&kp LS(LALT)>;
-            layer = NUM;
+            layers = <NUM>;
         };
         //NOTE: LEFT
         
@@ -145,14 +145,14 @@
             timeout-ms = <50>;
             key-positions = <16 26>;
             bindings = <&kp COLON>;
-            layer = NUM;
+            layers = <NUM>;
         };
 
         combo_semi {
             timeout-ms = <50>;
             key-positions = <17 27>;
             bindings = <&kp SEMI>;
-            layer = NUM;
+            layers = <NUM>;
         };
         // ====================================================================
 
@@ -166,7 +166,7 @@
             timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <mkp MCLK>;
-            layer = MOUSE;
+            layers = <MOUSE>;
         }
         // ===================================================================
 
