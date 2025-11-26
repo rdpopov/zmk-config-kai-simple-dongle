@@ -55,11 +55,6 @@
                     ╰────────╯ ╰────────╯            */
     combos {
         compatible = "zmk,combos";
-        combo_mouse {
-            timeout-ms = <50>;
-            key-positions = <30 31>;
-            bindings = <&mo MOUSE>;
-        };
 
         // default layer combos 
         // ====================================================================
@@ -98,14 +93,13 @@
         combo_coma {
             timeout-ms = <50>;
             key-positions = <16 26>;
-            bindings = <&kp COMA>;
+            bindings = <&kp COMMA>;
             layers = <BASE>;
         };
         // dot
         combo_dot {
             timeout-ms = <50>;
             key-positions = <17 27>;
-            layer = BASE;
             bindings = <&kp DOT>;
             layers = <BASE>;
         };
@@ -165,9 +159,9 @@
         combo_mouse_click {
             timeout-ms = <50>;
             key-positions = <32 33>;
-            bindings = <mkp MCLK>;
+            bindings = <&mkp MCLK>;
             layers = <MOUSE>;
-        }
+        };
         // ===================================================================
 
     };
@@ -189,8 +183,8 @@
             bindings = <
                 &kp ESC    &kp N1  &kp N2  &kp N3  &none         &none  &kp UNDERSCORE &kp LPAR  &kp RPAR  &kp PLUS
                 &kp TAB    &kp N4  &kp N5  &kp N6  &none         &none  &kp MINUS      &kp LBRC  &kp RBRC  &kp EQUAL
-                &kp N0     &kp N7  &kp N8  &kp N9  &none         &none  &kp BKSP       &kp LBKT  &kp RBK   &kp DEL
-                                           &none   &trans        &trans &sk RGUI
+                &kp N0     &kp N7  &kp N8  &kp N9  &none         &none  &kp BKSP       &kp LBKT  &kp RBKT  &kp DEL
+                                           &none   &trans        &trans &trans
             >;
         };
 
@@ -200,14 +194,15 @@
                 &trans      &kp EXCL    &kp AT       &kp HASH   &none       &none   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
                 &trans      &kp DOLLAR  &kp PERCENT  &kp CARET  &none       &none   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
                 &kp LCTL    &kp AMPS    &kp STAR     &kp TILDE  &none       &none   &trans    &none      &none      &trans
-                                                     &sk RCTRL  &trans      &trans  &none
+                                                     &none      &trans      &trans  &none
             >;
         };
+
         mouse {
             bindings = <
-                &kp f12   &kp F1    &kp F2     &kp F3  &none              &none     &none          &none          &none        &none             
+                &kp F12   &kp F1    &kp F2     &kp F3  &none              &none     &none          &none          &none        &none
                 &kp F11   &kp F4    &kp F5     &kp F6  &none              &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT
-                &kp F10   &kp F7    &kp F8     &kp F9  &none              &none     &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT   
+                &kp F10   &kp F7    &kp F8     &kp F9  &none              &none     &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT
                                                &none   &none              &mkp LCLK &mkp RCLK
             >;
         };
