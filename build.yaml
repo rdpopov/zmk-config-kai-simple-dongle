@@ -17,22 +17,22 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
-# nice_nano_v2
+# nice_nano
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: kai_simple_left
     # Add these cmake-args to the peripherals you wish to use with the dongle
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: kai_simple_right
     # Add these cmake-args to the peripherals you wish to use with the dongle
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: kai_simple_dongle dongle_display
     snippet: zmk-usb-logging
     # uart snippet needed on central side for ZMK studio to work
 
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
