@@ -1,9 +1,9 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#import "kai_simple-layout.dtsi"
+#include "kai_simple-layout.dtsi"
 #include "kai_simple_pinctrl.dtsi"
 
-&physical_layout0 {
+&default_layout {
     transform = <&default_transform>;
 };
 
@@ -28,7 +28,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &physical_layout0;
+        zmk,physical-layout = &default_layout;
         zephyr,display = &oled;
     };
 
