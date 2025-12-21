@@ -3,7 +3,7 @@ id: kai-simple
 name: kai-simple
 type: shield
 url: https://github.com/kaihchang/zmk-config-kai-simple
-requires: [promicro_nrf52840]
+requires: [nice_nano_v2]
 features:
   - keys
 siblings:
