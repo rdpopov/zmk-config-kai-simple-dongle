@@ -6,7 +6,7 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#include "urchin-layouts.dtsi"
+#include "kai_simple-layout.dtsi"
 
 &default_layout {
     transform = <&default_transform>;
