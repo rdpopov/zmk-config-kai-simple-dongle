@@ -27,3 +27,20 @@
         , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3
     ;
 };
+
+&i2c0 {
+    status = "okay";
+
+    cirque: cirque@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        sensitivity = "2x";     /* 1–10 */
+    };
+};
+
+/ {
+    cirque_listener: cirque_listener {
+        compatible = "zmk,input-listener";
+        device = <&cirque>;
+    };
+};
