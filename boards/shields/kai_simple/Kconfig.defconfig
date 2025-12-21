@@ -52,4 +52,6 @@ if SHIELD_KAI_SIMPLE_LEFT || SHIELD_KAI_SIMPLE_RIGHT
 config ZMK_SPLIT
     default y
 
+# TODO: add spi for ciqrue
+
 endif
