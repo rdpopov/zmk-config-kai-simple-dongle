@@ -8,7 +8,7 @@
 
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
-/* #include "split-inputs.dtsi" */
+#include "glidepoint_shared.dtsi"
 
 &default_transform {
     col-offset = <5>;
@@ -31,62 +31,43 @@
     ;
 };
 
-/* &pinctrl { */
-/*     /1* I2C Configuration using dedicated I2C pins *1/ */
-/*     i2c0_default: i2c0_default { */
-/*         group1 { */
-/*             /1* SDA: P1.00 (D6), SCL: P0.11 (D7) *1/ */
-/*             psels = <NRF_PSEL(TWIM_SDA, 0, 17)>, */
-/*                     <NRF_PSEL(TWIM_SCL, 0, 20)>; */
-/*         }; */
-/*     }; */
+&pinctrl {
+    /* I2C Configuration using dedicated I2C pins */
+    i2c0_default: i2c0_default {
+        group1 {
+            /* SDA: P1.00 (D6), SCL: P0.11 (D7) */
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
+        };
+    };
 
-/*     i2c0_sleep: i2c0_sleep { */
-/*         group1 { */
-/*             psels = <NRF_PSEL(TWIM_SDA, 0, 17)>, */
-/*                     <NRF_PSEL(TWIM_SCL, 0, 20)>; */
-/*             low-power-enable; */
-/*         }; */
-/*     }; */
-/* }; */
+    i2c0_sleep: i2c0_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
+            low-power-enable;
+        };
+    };
+};
 
 &i2c0 {
     status = "okay";
     compatible = "nordic,nrf-twi";
-    /* pinctrl-0 = <&i2c0_default>; */
-    /* pinctrl-1 = <&i2c0_sleep>; */
-    /* pinctrl-names = "default", "sleep"; */
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
     clock-frequency = <I2C_BITRATE_FAST>; 
     
-    glidepoint1: glidepoint1@2a {
+    glidepoint: glidepoint@0 {
         compatible = "cirque,pinnacle";
-        reg = <0x2a>;
+        reg = <0x0>;
         status = "okay";
         sensitivity = "2x"; //1x, 2x, 3x, 4x
-        //rotate-90;
-        //x-invert;
-        //y-invert;
-        //sleep;
-        //no-secondary-tap;
-        //no-taps;
-        //x-axis-z-min = 5; //default 5, malformed value error
-        //y-axis-z-min = 4; // default 4, malformed value error
-        /* absolute-mode; */
     };
 };
 
-/ {
-    vtrackpad: virtual_input_trackpad {
-        compatible = "zmk,virtual-input";
-    };
-    input_relay_config_trackpad {
-        compatible = "zmk,split-peripheral-input-relay";
-
-        /* channel id, used to filter incoming annotated input event from split peripheral */
-        /* NOTE: should matching relay-channel on peripheral overlay */
-        relay-channel = <203>;
-
-        /* virtual input device on central, which used to emit input event as an agent device */
-        device = <&glidepoint1>;
-    };
+&glidepoint_split {
+    device = <&glidepoint>;
+    // Optional
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };

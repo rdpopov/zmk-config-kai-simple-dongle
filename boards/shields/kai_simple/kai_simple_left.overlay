@@ -22,8 +22,3 @@
         , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3
     ;
 };
-
-/ {
-    vtrackpad: virtual_input_trackpad {
-        compatible = "zmk,virtual-input";
-    };};

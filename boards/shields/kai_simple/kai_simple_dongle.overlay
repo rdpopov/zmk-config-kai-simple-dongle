@@ -2,6 +2,7 @@
 
 #include "kai_simple-layout.dtsi"
 #include "kai_simple_pinctrl.dtsi"
+#include "glidepoint_shared.dtsi"
 
 &default_layout {
     transform = <&default_transform>;
@@ -51,24 +52,8 @@
                                                 RC(3,3)     RC(3,4)         RC(3,5)     RC(3,6)
         >;
     };
-    
 };
 
-
-/ {
-    vtrackpad: virtual_input_trackpad {
-        compatible = "zmk,virtual-input";
-    };
-
-    input_relay_config_trackpad {
-        compatible = "zmk,split-peripheral-input-relay";
-
-        /* channel id, used to filter incoming annotated input event from split peripheral */
-        /* NOTE: should matching relay-channel on peripheral overlay */
-        relay-channel = <203>;
-
-        /* virtual input device on central, which used to emit input event as an agent device */
-        device = <&vtrackpad>;
-    };
+&glidepoint_listener {
+    status = "okay";
 };
-
