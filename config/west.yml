@@ -6,8 +6,6 @@ manifest:
       url-base: https://github.com/rdpopov
     - name: petejohanson
       url-base: https://github.com/petejohanson
-    - name: badjeff
-      url-base: https://github.com/badjeff
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -19,14 +17,5 @@ manifest:
     - name: cirque-input-module
       remote: petejohanson
       revision: main
-    - name: zmk-split-peripheral-input-relay
-      remote: badjeff
-      revision: main
-    - name: zmk-input-behavior-listener
-      remote: badjeff
-      revision: main
-    # - name: cirque-input-module
-    #   remote: badjeff
-    #   revision: main
   self:
     path: config
