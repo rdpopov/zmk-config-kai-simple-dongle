@@ -60,23 +60,6 @@
         compatible = "zmk,virtual-input";
     };
 
-    /* trackpad_peripheral_scroll_listener { */
-    /*     compatible = "zmk,input-behavior-listener"; */
-    /*     device = <&vtrackpad>; */
-    /*     evt-type = <INPUT_EV_REL>; */
-    /*     x-input-code = <INPUT_REL_WHEEL>; */
-    /*     y-input-code = <INPUT_REL_MISC>; */
-    /*     bindings = <&ib_wheel_scaler_x 1 8>; */
-    /* }; */ 
-
-    /* trackpad_peripheral_scroll_snipe_listener { */
-    /*     compatible = "zmk,input-behavior-listener"; */
-    /*     device = <&vtrackpad>; */
-    /*     evt-type = <INPUT_EV_REL>; */
-    /*     x-input-code = <INPUT_REL_WHEEL>; */
-    /*     y-input-code = <INPUT_REL_MISC>; */
-    /*     bindings = <&ib_wheel_scaler_x 1 16>; */
-    /* }; */ 
     input_relay_config_trackpad {
         compatible = "zmk,split-peripheral-input-relay";
 

@@ -18,6 +18,16 @@
 #define BTT 3
 #define MOUSE 4
 
+
+/ {
+    trackpad_peripheral_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackpad>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+    };
+};
 &mt {
     flavor = "tap-preferred";
     tapping_term_ms = <200>;
@@ -34,9 +44,6 @@
 
 
 / {
-
-
-
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
