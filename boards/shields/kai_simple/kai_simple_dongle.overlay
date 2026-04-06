@@ -32,6 +32,21 @@
         zephyr,display = &oled;
     };
 
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        cirque_split: cirque_split@1 {
+            compatible = "zmk,input-split";
+            reg = <1>;
+        };
+    };
+
+    cirque_listener: cirque_listener {
+        compatible = "zmk,input-listener";
+        device = <&cirque_split>;
+    };
+
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
