@@ -78,8 +78,8 @@
         left_layer {
             bindings = <
                 &kp N0     &kp N1  &kp N2  &kp N3  &kp LS(LALT)  &kp UNDERSCORE &kp LPAR  &kp RPAR  &kp PLUS  &kp DEL
-                &kp PIPE   &kp N4  &kp N5  &kp N6  &none         &kp MINUS      &kp LBRC  &kp RBRC  &kp EQUAL &kp COLON
-                &kp BSLH   &kp N7  &kp N8  &kp N9  &kp N0        &kp TILDE      &kp LBKT  &kp RBKT  &kp GRAVE  &kp SEMI
+                &kp PIPE   &kp N4  &kp N5  &kp N6  &kp TILDE     &kp MINUS      &kp LBRC  &kp RBRC  &kp EQUAL &kp COLON
+                &kp FSLH   &kp N7  &kp N8  &kp N9  &kp GRAVE     &none          &kp LBKT  &kp RBKT  &none     &kp SEMI
                                            &none   &trans        &trans         &sk RGUI
             >;
         };
@@ -103,10 +103,10 @@
         };
         mouse {
             bindings = <
-                &none       &kp F1    &kp F2     &kp F3  &kp F4               &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT  &none 
-                &none       &kp F5    &kp F6     &kp F7  &kp F8               &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &none 
-                &kp RSHFT   &kp F9    &kp F10    &kp F11 &kp F12              &mkp MCLK      &none          &none        &none            &none 
-                                                 &none   &none                &mkp LCLK &mkp RCLK
+                &kp F1      &kp F2    &kp F3     &kp F4  &none               &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT  &none 
+                &kp F5      &kp F6    &kp F7     &kp F8  &none               &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &none 
+                &kp F9      &kp F10   &kp F11    &kp F12 &none               &mkp MCLK      &none          &none        &none            &none 
+                                                 &none   &none               &mkp LCLK &mkp RCLK
             >;
         };
     };
