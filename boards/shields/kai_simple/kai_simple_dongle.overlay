@@ -2,7 +2,7 @@
 
 #include "kai_simple-layout.dtsi"
 #include "kai_simple_pinctrl.dtsi"
-#include "glidepoint_shared.dtsi"
+/* #include "glidepoint_shared.dtsi" */
 
 &default_layout {
     transform = <&default_transform>;
