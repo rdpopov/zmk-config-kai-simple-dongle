@@ -28,6 +28,9 @@ config I2C
 config SSD1306
     default y
 
+config ZMK_POINTING
+    default y
+
 endif # ZMK_DISPLAY
 
 if LVGL
@@ -51,7 +54,11 @@ if SHIELD_KAI_SIMPLE_LEFT || SHIELD_KAI_SIMPLE_RIGHT
 
 config ZMK_SPLIT
     default y
+endif
 
-# TODO: add spi for ciqrue
-
+if SHIELD_KAI_SIMPLE_RIGHT
+config ZMK_POINTING
+    default y
+config I2C
+    default y
 endif

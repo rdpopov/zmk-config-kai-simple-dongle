@@ -2,7 +2,8 @@
 
 #include "kai_simple-layout.dtsi"
 #include "kai_simple_pinctrl.dtsi"
-/* #include "glidepoint_shared.dtsi" */
+#include <input/processors.dtsi>
+#include "glidepoint_shared.dtsi"
 
 &default_layout {
     transform = <&default_transform>;
@@ -54,6 +55,8 @@
     };
 };
 
-/* &glidepoint_listener { */
-/*     status = "okay"; */
-/* }; */
+&glidepoint_listener {
+    status = "okay";
+    input-processors = <&zip_xy_transform(INPUT_TRANSFORM_XY_SWAP |
+    INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+};
