@@ -3,19 +3,14 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: englmaxi
-      url-base: https://github.com/rdpopov
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
+      url-base: https://github.com/englmaxi
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: main
-    - name: cirque-input-module
-      remote: petejohanson
       revision: main
   self:
     path: config
